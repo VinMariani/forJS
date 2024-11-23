@@ -84,24 +84,227 @@ function type() {
 	alert(elem2.type)
 }
 
+// 348 - 3
 function anchor() {
 	elem.textContent = a.href;
 	alert(elem.innerHTML)
 }
-// let button1 = document.querySelector('#button1');
 
-// button1.addEventListener('click', func1);
+// 348 - 4 
+function anchor2() {
+	a.textContent = `${a.textContent} (${a.href})}`;
+}
 
+// 348 - 5 
+function img() {
+	elem1.textContent = image.src;
+}
+
+// 348 - 6
+function img2() {
+	image.width = '300';
+	console.log(image.width);
+}
+
+// 348 - 7
+function img3() {
+	image.width = image.width*2;
+	console.log(image.width)
+}
+
+// 348 - 8 
+function img4() {
+	image.src = "/img.jpg";
+}
+
+function img5() {
+	image2.src = '/img/img2.jpg';
+}
+
+// 349 - 1
+function text() {
+	text_input.value = 'new_text';
+}
+
+// 349 - 2
+function text2() {
+	text_input.value = elem.textContent;
+}
+
+// 349 - 3
+function text3() {
+	text_input2.value = text_input.value**2;
+}
+
+// 349 - 4 ???
+function text4() {
+	text_input.value = text_input2.value;
+	text_input2.value = text_input.value;
+}
+
+// 349 - 5
+function text5() {
+	elem.textContent = (Number(text_input.value) + Number(text_input2.value) + Number(text_input3.value) + Number(text_input4.value) + Number(text_input5.value)) / 5;
+}
+
+// 350 - 1 
+function focus() {
+	text_input.value = '1';
+}
+
+function focus2() {
+	text_input.value = '2';
+}
+
+// 350 - 2
+function focus3() {
+	alert(text_input.value**2);
+}
+
+// 350 - 3
+function focus4() {
+	text_input.value = null;
+}
+
+// 351 - 1
+function div() {
+	alert(divelem.className);
+}
+
+// 351 - 2
+function div2() {
+	divelem.className = 'newClass';
+	alert(divelem.className);
+}
+
+// 351 - 3
+function div3() {
+	let classes = [];
+
+	// classes = divelem.classList;
+
+	for (let i = 0; i < divelem.classList.length; i++) {
+		classes.push(divelem.classList[i])
+	};
+
+	console.log(classes);
+}
+
+// 352 
+function img6() {
+	console.log(document.querySelector('#img').src);
+}
+
+// 353
+function img7() {
+	console.log(image.src);
+	console.log(image.width);
+	console.log(image.height);
+}
+
+// 354 - 1
+function thisfunc1() {
+	this.value = '1';
+}
+
+function thisfunc2() {
+	this.value = '2';
+}
+
+// 354 - 2
+function thisfunc3() {
+	this.value = Number(this.value) + Number(1);
+}
+
+// 355 - 1 
+function texts() {
+	this.textContent = this.textContent + '!';
+}
+
+// 355 - 2
+function text_input355() {
+	this.value = Number(this.value)**2;
+}
+
+// 356 - 1
+function function3561() {
+	for (let elem of elems) {
+		elem.textContent = 'text'
+	}
+}
+
+// 356 - 2
+function function3562() {
+	for (let i = 0; i < elems.length; i++) {
+		elems[i].textContent += `${i + 1}`;
+	}
+}
+
+// 356 - 3
+function function3563() {
+	let sum = 0;
+	for (let elem of inputs) {
+		sum += Number(elem.value);
+	}
+
+	elem1.textContent = sum;
+}
+
+// 357 - 1
+function func3571() {
+	for (let elem of inputs) {
+		elem.addEventListener('blur', function() {
+		this.value = Number(this.value) + 1;
+	});
+}
+}
+
+// 357 - 2
+function func3572() {
+	for (let elem of elems) {
+		elem.addEventListener('click',  () => {
+			this.textContent = Number(this.textContent)**2;
+		});
+	}
+}
+
+let button1 = document.querySelector('#button1');
 let button2 = document.querySelector('#button2');
-let elem = document.querySelector('#elem');
-let elem1 = document.querySelector('#elem1');
-let div = document.querySelector('.div');
-let a = document.querySelector('#a')
-// button2.addEventListener('click', func2);
-// button2.addEventListener('mouseover', func2);
-// button2.addEventListener('mouseout', func2);
-// button2.addEventListener('dblclick', func2)
 
-button2.addEventListener('click', anchor);
+let elem1 = document.querySelector('#elem1');
+let elem2 = document.querySelector('#elem2');
+let elem3 = document.querySelector('#elem3');
+
+let elems = document.querySelectorAll('.elem');
+
+let divelem = document.querySelector('#div');
+
+let a = document.querySelector('#a');
+
+let image = document.querySelector('#img');
+let image2 = document.querySelector('#img2');
+
+let text_input = document.querySelector('#text-input');
+let text_input2 = document.querySelector('#text-input-2');
+let text_input3 = document.querySelector('#text-input-3');
+let text_input4 = document.querySelector('#text-input-4');
+let text_input5 = document.querySelector('#text-input-5');
+
+let inputs = document.querySelectorAll('.text-input')
+
+
+button1.addEventListener('blur', func3571);
+button2.addEventListener('click', img7);
+
+
+// text_input.addEventListener('blur', text_input355);
+// text_input2.addEventListener('blur', text_input355);
+// text_input3.addEventListener('blur', text_input355);
+// text_input.addEventListener('blur', thisfunc2);
+elem1.addEventListener('click', texts)
+elem2.addEventListener('click', texts)
+elem3.addEventListener('click', texts)
+
+
 
 
