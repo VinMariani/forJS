@@ -23,8 +23,32 @@ let text_input5 = document.querySelector('#text-input-5');
 
 let inputs = document.querySelectorAll('.text-input');
 
-let list_items = document.querySelectorAll('.list__item');
 
+
+// 362
+function sumDigits(year) {
+    let sum = 0;
+    while (year > 0) {
+      sum += year % 10;
+      year = Math.floor(year / 10);
+    }
+    return sum;
+  }
+  
+  function func362() {
+    const list_items = document.getElementsByTagName("li");
+    let totalSum = 0; 
+  
+    for (let i = 0; i < list_items.length; i++) {
+      const year = Number(list_items[i].textContent); // Преобразуем строку в число
+      if (sumDigits(year) === 6) { // Проверяем, равна ли сумма цифр 6
+        totalSum += year; // Добавляем год к общей сумме
+      }
+    }
+  
+    console.log("Общая сумма годов:", totalSum);
+  }
+  func362();
 
 
 // button1.addEventListener('blur', func3571);
