@@ -1,54 +1,149 @@
-let button1 = document.querySelector('#button1');
-let button2 = document.querySelector('#button2');
+// let button1 = document.querySelector('#button1');
+// let button2 = document.querySelector('#button2');
 
-let elem1 = document.querySelector('#elem1');
-let elem2 = document.querySelector('#elem2');
-let elem3 = document.querySelector('#elem3');
+// let elem1 = document.querySelector('#elem1');
+// let elem2 = document.querySelector('#elem2');
+// let elem3 = document.querySelector('#elem3');
 
-let elems = document.querySelectorAll('.elem');
+// let elems = document.querySelectorAll('.elem');
 
-let divelem = document.querySelector('#div');
-let divs = document.querySelectorAll('.div');
+// let divelem = document.querySelector('#div');
+// let divs = document.querySelectorAll('.div');
 
-let a = document.querySelector('#a');
+// let a = document.querySelector('#a');
 
-let image = document.querySelector('#img');
-let image2 = document.querySelector('#img2');
+// let image = document.querySelector('#img');
+// let image2 = document.querySelector('#img2');
 
-let text_input = document.querySelector('#text-input');
-let text_input2 = document.querySelector('#text-input-2');
-let text_input3 = document.querySelector('#text-input-3');
-let text_input4 = document.querySelector('#text-input-4');
-let text_input5 = document.querySelector('#text-input-5');
+// let text_input = document.querySelector('#text-input');
+// let text_input2 = document.querySelector('#text-input-2');
+// let text_input3 = document.querySelector('#text-input-3');
+// let text_input4 = document.querySelector('#text-input-4');
+// let text_input5 = document.querySelector('#text-input-5');
 
-let inputs = document.querySelectorAll('.text-input');
+// let inputs = document.querySelectorAll('.text-input');
+
+//
 
 
+
+// 363-9
+// let btn  = document.querySelector('#btn');
+// let inp1 = document.querySelector('#text-input');
+// let inp2 = document.querySelector('#text-input-2');
+// let inp3 = document.querySelector('#text-input-3');
+
+// btn.addEventListener('click', function() {
+// 	inp3.value = Number(inp1.value) + Number(inp2.value);
+// });
+
+// 363-8
+// let button = document.querySelector('button');
+// let elems  = document.querySelectorAll('.text-input');
+// let sum = 0;
+
+// button.addEventListener('click', function() {
+//     for (let elem of elems) {
+//         sum += Number(elem.value);
+//     }
+// 	console.log(sum);
+// });
+
+// 363-7
+// let button = document.querySelector('button');
+// let elems  = document.querySelectorAll('.elem');
+// let sum = 0;
+
+// button.addEventListener('click', function() {
+//     for (let elem of elems) {	
+//         sum += Number(elem.textContent);
+//     };
+//     console.log(sum);
+// })
+
+
+// 363-6
+// let button = document.querySelector('button');
+// let elems  = document.querySelectorAll('.elem');
+
+// button.addEventListener('click', function() {
+// 	for (let elem of elems) {
+// 		elem.innerHTML = `<b>${elem.textContent}</b>`;
+// 	}
+// });
+
+
+// 363-5
+// let elems = document.querySelectorAll('.elem');
+// for (let elem of elems) {
+// 	elem.addEventListener('click', function() {
+// 		this.textContent += '!';
+// 	});
+// }
+
+// 363-4
+// let button = document.querySelector('button');
+// let elems  = document.querySelectorAll('.elem');
+
+// button.addEventListener('click', function() {
+// 	let sum = 0;
+	
+// 	for (let elem of elems) {
+// 		sum += Number(elem.textContent);
+// 	}
+	
+// 	console.log(sum);
+// });
+
+
+// 363-3
+// let button = document.querySelector('button');
+// let elem   = document.querySelector('p');
+
+// button.addEventListener('click', function() {
+// 	elem.innerHTML = `<b>${elem.textContent}</b>`;
+// });
+
+
+// 363-2
+// let elems = document.querySelectorAll('p');
+
+// for (let elem of elems) {
+// 	elem.addEventListener('click', function() {
+// 		this.textContent = Number(this.textContent) + Number(1);
+// 	});
+// }
+
+// 363-1
+// let elems = document.querySelectorAll('p');
+// for (let i = 0; i < elems.length; i++) {
+//     elems[i].textContent += '!';
+// }
 
 // 362
-function sumDigits(year) {
-    let sum = 0;
-    while (year > 0) {
-      sum += year % 10;
-      year = Math.floor(year / 10);
-    }
-    return sum;
-  }
+// function sumDigits(year) {
+//     let sum = 0;
+//     while (year > 0) {
+//       sum += year % 10;
+//       year = Math.floor(year / 10);
+//     }
+//     return sum;
+//   }
   
-  function func362() {
-    const list_items = document.getElementsByTagName("li");
-    let totalSum = 0; 
+//   function func362() {
+//     const list_items = document.getElementsByTagName("li");
+//     let totalSum = 0; 
   
-    for (let i = 0; i < list_items.length; i++) {
-      const year = Number(list_items[i].textContent); // Преобразуем строку в число
-      if (sumDigits(year) === 6) { // Проверяем, равна ли сумма цифр 6
-        totalSum += year; // Добавляем год к общей сумме
-      }
-    }
+//     for (let i = 0; i < list_items.length; i++) {
+//       const year = Number(list_items[i].textContent); // Преобразуем строку в число
+//       if (sumDigits(year) === 6) { // Проверяем, равна ли сумма цифр 6
+//         totalSum += year; // Добавляем год к общей сумме
+//       }
+//     }
   
-    console.log("Общая сумма годов:", totalSum);
-  }
-  func362();
+//     console.log("Общая сумма годов:", totalSum);
+//   }
+//   func362();
 
 
 // button1.addEventListener('blur', func3571);
