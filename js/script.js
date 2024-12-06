@@ -1,29 +1,148 @@
-// let button1 = document.querySelector('#button1');
-// let button2 = document.querySelector('#button2');
+// 364-4
+// Дан инпут. В него вводятся числа через запятую. 
+// По потери фокуса найдите среднее арифметическое этих чисел (сумма делить на количество).
+let input = document.querySelector('#inp1');
+let sum = 0;
+let res = 0;
+input.addEventListener('blur', function() {
+  let digits = input.value.split(',');
+  for (let i=0; i<digits.length; i++) {
+    sum += Number(digits[i]);
+    res = sum / digits.length;
+  }
+  console.log(res);
+});
 
-// let elem1 = document.querySelector('#elem1');
-// let elem2 = document.querySelector('#elem2');
-// let elem3 = document.querySelector('#elem3');
 
-// let elems = document.querySelectorAll('.elem');
+// 364-3
+// Дан инпут. В него вводится число. По потери фокуса найдите сумму цифр этого числа.
+// let input = document.querySelector('#inp1');
+// input.addEventListener('blur', function() {
+//   let digits = input.value.split('');
+//    let sum = 0;
+//    for (let digit of digits) {
+//      sum += Number(digit);
+//    }
+//  	console.log(sum);
+// })
 
-// let divelem = document.querySelector('#div');
-// let divs = document.querySelectorAll('.div');
+// 364-2
+// Дано несколько инпутов, абзац и кнопка. По нажатию на кнопку получите числа, стоящие в этих инпутах и запишите их сумму в абзац.
+// let inputs = document.querySelectorAll('input');
+// let text = document.querySelector('p');
+// let btn = document.querySelector('button');
+// let sum = 0;
 
-// let a = document.querySelector('#a');
+// btn.addEventListener('click', function() {
+//   for (let input of inputs) {
+//     sum += Number(input.value);
+//   }
+//   text.textContent = sum;
+// })
 
-// let image = document.querySelector('#img');
-// let image2 = document.querySelector('#img2');
+// 364-1
+// Дан инпут и абзац. По потери фокуса в инпуте запишите значение инпута в конец текста абзаца.
+// let input = document.querySelector('input')
+// let paragraph = document.querySelector('p')
 
-// let text_input = document.querySelector('#text-input');
-// let text_input2 = document.querySelector('#text-input-2');
-// let text_input3 = document.querySelector('#text-input-3');
-// let text_input4 = document.querySelector('#text-input-4');
-// let text_input5 = document.querySelector('#text-input-5');
+// input.addEventListener('blur', function() {
+//   paragraph.textContent = paragraph.textContent + input.value
+// })
 
-// let inputs = document.querySelectorAll('.text-input');
+// 363-15 
+// В инпут вводится число. По потери фокуса в консоль должна вывестись сумма цифр этого числа:
+// let inp = document.querySelector('#inp');
+// inp.addEventListener('blur', function() {
+// 	let digits = inp.value.split('');
+//   let sum = 0;
+//   for (let digit of digits) {
+//     sum += Number(digit);
+//   }
+// 	console.log(sum);
+// });
 
-//
+
+// 363-14
+// В первые два инпута вводятся числа. По клику на кнопку в третий инпут должна вывестись сумма этих чисел:
+// let btn  = document.querySelector('#btn');
+// let inp1 = document.querySelector('#inp1');
+// let inp2 = document.querySelector('#inp2');
+// let inp3 = document.querySelector('#inp3');
+
+// let sum  = 0;
+
+// btn.addEventListener('click', function() {
+//   sum = Number(inp1.value) + Number(inp2.value);
+//   inp3.value = sum;
+// });
+
+// 363-13
+// В инпуты вводятся числа. По клику на кнопку в консоль должна вывестись сумма введенных чисел:
+
+// let inputs = document.querySelectorAll('input');
+// let btn = document.querySelector('#btn');
+// let sum = 0;
+
+// btn.addEventListener('click', function() {
+// 	for (let input of inputs) {
+// 		sum += Number(input.value);
+// 	}
+	
+// 	console.log(sum);
+// });
+
+// 363-12 
+// В первые два инпута вводятся числа. По клику на кнопку в третий инпут должна вывестись сумма этих чисел:
+// let inputs = document.querySelectorAll('input')
+// let button = document.querySelector('#btn')
+
+// let texts = [
+// 	'text1',
+// 	'text2',
+// 	'text3',
+// ];
+
+// button.addEventListener('click', function() {
+
+//   for (let input of inputs) {
+//     let flag = false;
+// 		for (let text of texts) {
+// 			if (input.value === text) {
+//         flag = true;
+// 			}
+// 		}
+//   if (flag === true) {
+//     input.classList.add('right')
+//   } else {
+//     input.classList.add('wrong')
+//   }
+// }
+// });
+
+// 363-11
+// В инпут вводится число. По потери фокуса в консоль должна вывестись сумма цифр этого числа:
+// let inputs = document.querySelectorAll('input')
+// let button = document.querySelector('#btn')
+
+// button.addEventListener('click', function() {
+// 	for (let input of inputs) {
+// 		if (input.value === input.dataset.text) {
+// 			input.classList.add('right')
+// 		} else {
+// 			input.classList.add('wrong')
+// 		}
+// 	}
+// });
+
+// 363-10 ---???
+// let btn  = document.querySelector('#btn');
+// let res  = document.querySelector('#res');
+// let inp1 = document.querySelector('#inp1');
+// let inp2 = document.querySelector('#inp2');
+
+// btn.addEventListener('click', function() {
+//   res.textContent = Number(inp1.value) + Number(inp2.value);
+// });
 
 
 
@@ -519,4 +638,27 @@
 // 	});
 // };
 
-// 
+// let button1 = document.querySelector('#button1');
+// let button2 = document.querySelector('#button2');
+
+// let elem1 = document.querySelector('#elem1');
+// let elem2 = document.querySelector('#elem2');
+// let elem3 = document.querySelector('#elem3');
+
+// let elems = document.querySelectorAll('.elem');
+
+// let divelem = document.querySelector('#div');
+// let divs = document.querySelectorAll('.div');
+
+// let a = document.querySelector('#a');
+
+// let image = document.querySelector('#img');
+// let image2 = document.querySelector('#img2');
+
+// let text_input = document.querySelector('#text-input');
+// let text_input2 = document.querySelector('#text-input-2');
+// let text_input3 = document.querySelector('#text-input-3');
+// let text_input4 = document.querySelector('#text-input-4');
+// let text_input5 = document.querySelector('#text-input-5');
+
+// let inputs = document.querySelectorAll('.text-input');
