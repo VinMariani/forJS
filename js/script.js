@@ -1,4 +1,39 @@
-// 
+// 377 
+// Дан див и кнопка. По клику на кнопку добавьте диву ширину, высоту и границу.
+// let elem = document.querySelector('#elem');
+// let btn = document.querySelector('#btn2');
+
+// if (btn) {
+//   btn.addEventListener('click', function() {
+//     if (elem) {
+//       elem.style.width = '60px';
+//       elem.style.heigth = '30px'; 
+//       elem.style.border = '1px solid black';
+//     };
+//   })
+// }
+
+// 376
+// let elem = document.querySelector('#elem');
+// if (elem) {
+//   elem.classList.toggle('www')
+// }
+
+// 374
+// let elem = document.querySelector('#elem');
+// if (elem) {
+//   if (elem.classList.contains('ggg')) {
+//     elem.classList.remove('ggg')
+//   } else {
+//     console.log('такой класс не найден')
+//   };
+// } else {
+//   console.log('такой элемент не найден')
+// }
+
+// 373-1
+// let elem = document.querySelector('#elem');
+// elem.classList.add('xxx')
 
 // 372-2
 // Переберите в цикле его классы.
