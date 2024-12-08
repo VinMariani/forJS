@@ -1,18 +1,239 @@
-// 364-4
+// 
+
+// 372-2
+// Переберите в цикле его классы.
+// let elem = document.querySelector('#elem');
+// let classes = elem.classList;
+// for (let className of classes) {
+//   console.log(className);
+// }
+
+// 372-1
+// Узнайте количество его классов.
+// let elem = document.querySelector('#elem');
+// let classes = elem.classList;
+// console.log(classes.length)
+
+// 371
+// let elems = document.querySelectorAll('.elem');
+// let number = 0;
+// elems.forEach((elem, index) => { 
+//   elem.setAttribute('data-num', '');
+//   elem.addEventListener('click', function() {
+//     elem.setAttribute('data-num', index+1);
+//   })
+// })
+
+// 370-1
+// по клику на див в конец его текста добавлялась стоимость покупки, 
+// равная цене, умноженной на количество.
+// let elem = document.querySelector('#elem');
+// elem.addEventListener('click', function() {
+//   let price = parseInt(elem.dataset.productPrice);
+//   let amount = parseInt(elem.dataset.productAmount);
+//   elem.textContent += price*amount;
+// })
+
+// 369-5
+// В инпуте в атрибуте data-length содержится количество символов, которое нужно ввести в инпут. 
+// чтобы по потери фокуса, если количество введенных символов не совпадает с заданным, выводилось сообщение об этом.
+// let input = document.querySelector('#elem');
+
+// input.addEventListener('blur', function() {
+//   let text = input.value;
+//   let max = parseInt(input.dataset.max);
+//   let min = parseInt(input.dataset.min);
+
+//   if (text.length < min || text.length > max ) {
+//     console.log('Ошибка')
+//   } else {
+//     console.log('ok')
+//   }
+// })
+
+// 369-4 -- ??
+// в атрибуте data-length содержится количество символов, которое нужно ввести в инпут.
+// чтобы по потери фокуса, если количество введенных символов не совпадает с заданным, выводилось сообщение об этом.
+// let input = document.querySelector('#elem');
+
+// input.addEventListener('blur', function() {
+//   let text = input.value;
+//   let textLength = parseInt(input.dataset.nL);
+
+//   if (text.length === textLength) {
+//     console.log('ok')
+//   } else { 
+//     console.log('not ok')
+//   }
+// })
+
+// 369-3
+// чтобы эта кнопка считала количество кликов по ней, записывая их в какой-нибудь пользовательский атрибут. 
+// Пусть по клику на другую кнопку на экран выводится, сколько кликов было сделано по первой кнопке.
+// let btnClick = document.querySelector('#btn');
+// let btnCount = document.querySelector('#btn2');
+// btnClick.setAttribute('data-count', '');
+  
+// btnClick.addEventListener('click', function() {
+//   btnClick.dataset.count++;
+// })
+
+// btnCount.addEventListener('click', function() {
+//   console.log(btnClick.dataset.count)
+// })
+
+// 369-2
+// Даны дивы, содержащие в атрибуте data-num свой порядковый номер
+// чтобы по клику на любой из дивов ему в конец записывался его порядковый номер.
+// let elems = document.querySelectorAll('div');
+// elems.forEach((elem) => {
+//   elem.addEventListener('click', function() {
+//     this.textContent += this.dataset.num; 
+//   })
+// })
+
+// 369-1
+// чтобы по клику на див в конец его текста добавилось содержимое его атрибута data-text.
+// let elem = document.querySelector('#elem');
+// elem.addEventListener('click', function() {
+//   let newText = elem.dataset.text;
+//   elem.textContent += newText;
+// })
+
+// 368
+// let input = document.querySelector('#elem');
+// console.log(input.hasAttribute('value'));
+
+// 367-1
+// let input = document.querySelector('#elem');
+// input.removeAttribute('value')
+
+// 366-2
+// let input = document.querySelector('#elem');
+// input.setAttribute('class', 'valid');
+
+// 366-1
+// let input = document.querySelector('#elem');
+// input.setAttribute('value', 'text');
+
+// 365-2
+// let input = document.querySelector('#elem');
+// let inputClass = input.getAttribute('class');
+// console.log(inputClass)
+
+// 365-1
+// let input = document.querySelector('#elem');
+// let inputValue = input.getAttribute('value');
+// console.log(inputValue)
+
+// 364-10
+// Дан инпут. В него вводится число. 
+// Проверьте по потери фокуса, что это число содержит внутри себя цифру 3.
+// let input = document.querySelector('#inp1');
+// input.addEventListener('blur', function() {
+//   let text = input.value;
+//   if (text.includes('3')) {
+//     console.log('есть')
+//   } else {
+//     console.log('нет')
+//   }
+// })
+
+// 364-9 
+// Дан инпут. В него вводится слово. 
+// По нажатию на кнопку проверьте то, что это слово читается с начала и с конца одинаково (например, мадам).
+// let input = document.querySelector('#inp1');
+// let btn = document.querySelector('button'); 
+
+// btn.addEventListener('click', function() {
+//   let letters = input.value;
+//   let lastIndex = letters.length-1;
+//   for (let i = 0; i < letters.length / 2; i++) {
+//     if (letters[i] !== letters[lastIndex-i]) {
+//       console.log('Неправильно')
+//     } else {
+//       console.log('Проверка пройдена')
+//     }
+//   }
+// })
+
+
+// {
+//   let letters = input.value.split(''); // ['f', 'f', 'f', 'f']
+//    for (let i=0; i<letters.length; i++) { // letters[i] = 'f'
+//        console.log(letters[i])
+//      }
+// }
+
+// 364-8
+// Дан инпут. В него вводится дата в формате 31.12.2016. 
+// По потери фокуса в этом же инпуте поставьте эту дату в формате 2016-12-31.
+// let input = document.querySelector('#inp1');
+// input.addEventListener('blur', function() {
+//   let dates = input.value.split('.');
+//   if (dates.length === 3) {
+//     let [day, month, year] = dates;
+//     let formattedDate = `${year}.${month}.${day}`;
+//     input.value = formattedDate;
+//   } else {
+//     alert('Введите корректную дату')
+//   }
+// });
+  
+// 364-7
+// Дан инпут. В него вводится текст. 
+// По потери фокуса узнайте количество слов в этом тексте.
+// let input = document.querySelector('#inp1');
+// input.addEventListener('blur', function() {
+//   let sum = 0; 
+//   let words = input.value.split(' '); 
+//   for (let i=0; i<words.length; i++) {
+//     sum++;
+//   };
+//   console.log(sum)
+// })
+
+// 364-6
+// Дан инпут. В него вводится ФИО через пробел. ФИО вводится с маленькой буквы. 
+// по потери фокуса инпутом, введенные фамилия, имя и отчество автоматически стали записанными с большой буквы (в этом же инпуте).
+// let input = document.querySelector('#inp1');
+// input.addEventListener('blur', function() {
+//   let fullname = input.value.split(' ');
+//   fullname = fullname.map(name => {
+//     return name.charAt(0).toUpperCase() + name.slice(1);
+//   }); 
+//    input.value = fullname.join(' ');
+//    console.log(fullname)
+// });
+
+// 364-5
+// Даны 4 инпута. В первый инпут вводится ФИО через пробел. 
+// По потери фокуса запишите фамилию, имя и отчество в остальные 3 инпута.
+// let inputFIO = document.querySelector('#inp1');
+// let inputs = document.querySelectorAll('.inp');
+// inputFIO.addEventListener('blur', function() {
+//   let fullname = inputFIO.value.split(' '); // ['Иванов', 'Иван', 'Иванович']
+//   for (let i=0; i<fullname.length; i++) {
+//     if (i<inputs.length) {
+//       inputs[i].value = fullname[i];
+//     }
+//   }
+// })
+
+// 364-4 - ?
 // Дан инпут. В него вводятся числа через запятую. 
 // По потери фокуса найдите среднее арифметическое этих чисел (сумма делить на количество).
-let input = document.querySelector('#inp1');
-let sum = 0;
-let res = 0;
-input.addEventListener('blur', function() {
-  let digits = input.value.split(',');
-  for (let i=0; i<digits.length; i++) {
-    sum += Number(digits[i]);
-    res = sum / digits.length;
-  }
-  console.log(res);
-});
-
+// let input = document.querySelector('#inp1');
+// let sum = 0;
+// let res = 0;
+// input.addEventListener('blur', function() {
+//   let digits = input.value.split(',');
+//   for (let i=0; i<digits.length; i++) {
+//     sum += Number(digits[i]);
+//     res = sum / digits.length;
+//   }
+//   console.log(res);
+// });
 
 // 364-3
 // Дан инпут. В него вводится число. По потери фокуса найдите сумму цифр этого числа.
